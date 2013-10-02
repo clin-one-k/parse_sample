@@ -11,16 +11,16 @@
 <script type="text/javascript" src="key.js"></script>
 <script>
 var currentUser;
-    $(document).ready(function(){
-        Parse.initialize ( APP_ID, JS_KEY );
-        currentUser = Parse.User.current();
-        if (!currentUser) {
-            window.location.href="login.php";
-            return;
-        } else {
-            //user already logged in
-        }
-    });
+$(document).ready( function(){
+    Parse.initialize ( APP_ID, JS_KEY );
+    currentUser = Parse.User.current();
+    if (!currentUser) {
+        window.location.href = "login.php";
+        return;
+    } else {
+        //user already logged in
+    }
+});
 
 function changePhone(){
     var phone = document.forms["changePhoneForm"]["phone"].value;
